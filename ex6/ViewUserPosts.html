@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Create User</title>
+  </head>
+  <body>
+    <form action="ViewUserPosts.php" method="post">
+      <label for="users">Select a user:</label>
+
+      <select name="users" id="user">
+        <?php
+                $mysqli = new mysqli("mysql.eecs.ku.edu", "johnportin", "eh3iehig", "johnportin");
+                
+                if ($mysqli->connect_errno) { exit(); } else { } $result =
+        $mysqli->query("SELECT * FROM Users"); $users = array(); while ($row =
+        $result->fetch_assoc()) { array_push($users, $row['user_id']); }
+        foreach($users as $user) { echo "
+        <option value="$user">" . $user . "</option>
+        "; } ?>
+      </select>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
