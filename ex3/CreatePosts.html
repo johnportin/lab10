@@ -1,32 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-  <title>Create User</title>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Create Post</title>
+  </head>
 
-</head>
+  <body>
+    <h1>Write your post below</h1>
 
-<body>
+    <form action="CreatePosts.php" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" />
+      <br />
+      <br />
 
-
-    <h1>
-        Write your post below
-    </h1>
-
-    <form action='CreatePosts.php' method='post'>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <br> <br>
-
-        <label for="post">Post:</label>
-        <textarea name="post" id="post"></textarea>
-        <br><br>
-        <input type="submit" value="Submit">
+      <label for="post">Post:</label>
+      <textarea name="post" id="post"></textarea>
+      <br /><br />
+      <input type="submit" value="Submit" />
     </form>
-  <!-- <script src="js/scripts.js"></script> -->
-
-</body>
-
+    <!-- <script src="js/scripts.js"></script> -->
+  </body>
 </html>
